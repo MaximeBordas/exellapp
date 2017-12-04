@@ -82,7 +82,7 @@ easy_admin:
         - ExellBundle\Entity\Offres
         - ExellBundle\Entity\Bien
         - ExellBundle\Entity\Utilisateur
-        - ExellBundle\Entity\TypeBien
+
 
 fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'

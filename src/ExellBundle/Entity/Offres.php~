@@ -99,3 +99,4 @@ class Offres
         return $this->text;
     }
 }
+

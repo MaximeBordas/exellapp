@@ -113,4 +113,52 @@ class Prix
     {
         return $this->libellePrix;
     }
+
+    /**
+     * Set priceMin
+     *
+     * @param float $priceMin
+     *
+     * @return Prix
+     */
+    public function setPriceMin($priceMin)
+    {
+        $this->priceMin = $priceMin;
+
+        return $this;
+    }
+
+    /**
+     * Get priceMin
+     *
+     * @return float
+     */
+    public function getPriceMin()
+    {
+        return $this->priceMin;
+    }
+
+    /**
+     * Set priceMax
+     *
+     * @param float $priceMax
+     *
+     * @return Prix
+     */
+    public function setPriceMax($priceMax)
+    {
+        $this->priceMax = $priceMax;
+
+        return $this;
+    }
+
+    /**
+     * Get priceMax
+     *
+     * @return float
+     */
+    public function getPriceMax()
+    {
+        return $this->priceMax;
+    }
 }

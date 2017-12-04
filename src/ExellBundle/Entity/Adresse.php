@@ -22,6 +22,13 @@ class Adresse
     private $id;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="libelle_adress", type="string", length=255)
+     */
+    private $libelleAdress;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="numeroVoie", type="integer")
@@ -158,6 +165,30 @@ class Adresse
 
     public function __toString()
     {
-        return $this->ville;
+        return $this->libelleAdress;
+    }
+
+    /**
+     * Set libelleAdress
+     *
+     * @param string $libelleAdress
+     *
+     * @return Adresse
+     */
+    public function setLibelleAdress($libelleAdress)
+    {
+        $this->libelleAdress = $libelleAdress;
+
+        return $this;
+    }
+
+    /**
+     * Get libelleAdress
+     *
+     * @return string
+     */
+    public function getLibelleAdress()
+    {
+        return $this->libelleAdress;
     }
 }

@@ -79,4 +79,38 @@ class Utilisateur extends BaseUser
     {
         return $this->numeroTel;
     }
+
+    /**
+     * Add lesBien
+     *
+     * @param \ExellBundle\Entity\Bien $lesBien
+     *
+     * @return Utilisateur
+     */
+    public function addLesBien(\ExellBundle\Entity\Bien $lesBien)
+    {
+        $this->lesBiens[] = $lesBien;
+
+        return $this;
+    }
+
+    /**
+     * Remove lesBien
+     *
+     * @param \ExellBundle\Entity\Bien $lesBien
+     */
+    public function removeLesBien(\ExellBundle\Entity\Bien $lesBien)
+    {
+        $this->lesBiens->removeElement($lesBien);
+    }
+
+    /**
+     * Get lesBiens
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getLesBiens()
+    {
+        return $this->lesBiens;
+    }
 }

@@ -38,11 +38,7 @@ class Bien
      */
     private $nomTypeBien;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="ExellBundle\Entity\TypeBien",cascade={"persist"})
-     *
-     */
-    private $libelleTypeBien;
+
 
 
     /**
@@ -335,39 +331,7 @@ class Bien
         return $this->agence;
     }
 
-    /**
-     * Add libelleTypeBien
-     *
-     * @param \ExellBundle\Entity\TypeBien $libelleTypeBien
-     *
-     * @return Bien
-     */
-    public function addLibelleTypeBien(\ExellBundle\Entity\TypeBien $libelleTypeBien)
-    {
-        $this->libelleTypeBien[] = $libelleTypeBien;
-
-        return $this;
-    }
-
-    /**
-     * Remove libelleTypeBien
-     *
-     * @param \ExellBundle\Entity\TypeBien $libelleTypeBien
-     */
-    public function removeLibelleTypeBien(\ExellBundle\Entity\TypeBien $libelleTypeBien)
-    {
-        $this->libelleTypeBien->removeElement($libelleTypeBien);
-    }
-
-    /**
-     * Get libelleTypeBien
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getLibelleTypeBien()
-    {
-        return $this->libelleTypeBien;
-    }
+    
 
 
     /**
