@@ -1,0 +1,4 @@
+services:
+#    exell.example:
+#        class: ExellBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

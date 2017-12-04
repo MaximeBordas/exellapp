@@ -1,0 +1,147 @@
+{% extends'ExellBundle::layout.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block exell_body %}
+    <!--NAV BAR-->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('exell_homepage') }}">
+                    <img src="{{ asset('bundles/exell/image/exell.jpg') }}"  style="width: 70px; margin-top: -10px" alt="Exell-Immo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="Accueil" class="active"><a href="{{ path('exell_homepage') }}">Accueil</a></li>
+                    <li id="lots"><a href="{{ path('exell_list') }}">Voir les lots</a></li>
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mon compte <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class=""><a href="{{ path('exell_account') }}">Voirs les réservations</a></li>
+                                <li></li>
+                                <li class="divider"></li>
+                                <li id="Connect"><a href="{{ path('fos_user_security_logout') }}">Se deconnecter</a></li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li id="Connect"><a href="{{ path('fos_user_security_login') }}">Connecter</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--SECTION 1-->
+    <div id="exellCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        </ol>
+        <div class="carousel-inner bg-1" role="listbox">
+            <div class="item active">
+                <img src="{{ asset('bundles/exell/image/paris1.jpg') }}" alt="Paris" height="500px">
+                <div class="carousel-caption">
+                    <h1>Exell Immoneuf</h1>
+                    <p>Votre partenaire pour investir</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SECTION 2-->
+    <div class="container-fluid bg-2">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="icon">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </div>
+                <div class="box-title">
+                    <h3>Prix Direct Promoteurs</h3>
+                </div>
+                <div class="box-title">
+                    <p>Vous bénéficierez des conditions tarifaires identiques à celles des promoteurs, des remises supplémentaires sont possibles.</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="icon">
+                    <span class="glyphicon glyphicon-book"></span>
+                </div>
+                <div class="box-title">
+                    <h3>Toutes les Bulles de Vente au même endroit</h3>
+                </div>
+                <div class="box-title">
+                    <p>Visualisez l'offre de l'ensemble des promoteurs directement, plus besoin de faire de nombreuses visites, un gain de temps certain.</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="icon">
+                    <span class="glyphicon glyphicon-stats"></span>
+                </div>
+                <div class="box-title">
+                    <h3>Accompagnement de A à Z</h3>
+                </div>
+                <div class="box-title">
+                    <p>Nous nous occupons de votre projet pendant toute la durée de votre opération, sur 4 étapes indispensables.</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="icon"> </div>
+                <div class="box-title">
+                    <h3>Gestion Immobilière et Aide à la Déclaration</h3>
+                </div>
+                <div class="box-title">
+                    <p>Nous gérons votre bien et vous apportons une aide à la déclaration annuelle à des conditions privilégiées.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--SECTION 3-->
+    <div class="container-fluid bg-3">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="video-title">
+                    <h3>Découvrez la Loi Pinel et notre expertise...</h3>
+                </div>
+                <div class="video-player">
+                    <video src="https://vimeo.com/172722300"></video>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="video-left-title">
+                    <h3>Exell Finance est spécialiste de l'immobilier neuf depuis plus de 17 ans.</h3>
+                </div>
+                <div class="video-left-lel">
+                    <h2>EXELL FINANCE : DES SPÉCIALISTES EN GESTION DE PATRIMOINE À VOTRE ÉCOUTE</h2>
+                </div>
+                <div class="video-left-content">
+                    <p>Vous souhaitez trouver une solution efficace pour abaisser votre pression fiscale ou vous constituer un capital en optant pour un investissement immobilier ? Expert en gestion de patrimoine, EXELL FINANCE vous aide à concrétiser votre projet.
+
+                        Après étude de votre situation fiscale, professionnelle et patrimoniale, nos consultants vous proposeront des solutions répondant à vos besoins. Que vous désiriez développer votre patrimoine grâce à un investissement immobilier ou mobilier, protéger votre famille et préparer votre succession, faites appel à notre équipe de spécialistes.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- SECTION 4-->
+    <div class="container-fluid bg-4">
+
+    </div>
+    <!--SECTION 5-->
+    <div class="container-fluid bg-5">
+
+    </div>
+    <!-- FOOTER-->
+    <footer class="container-fluid bg-6">
+        <div class="footer-text">
+            <p>2017 - © Exell</p>
+        </div>
+    </footer>
+{% endblock %}
+

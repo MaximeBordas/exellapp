@@ -1,0 +1,34 @@
+exell_homepage:
+    path:     /
+    defaults: { _controller: ExellBundle:Exell:index }
+
+exell_list:
+    path:     /list
+    defaults: { _controller: ExellBundle:Exell:showAllProduct }
+
+exell_showlot:
+    path:     /lot/{id}
+    defaults: { _controller: ExellBundle:Exell:showProduct , id: 1}
+    requirements:
+                id: \d*
+
+
+
+exell_reserver:
+    path:     /isreserved/{id}
+    defaults: { _controller: ExellBundle:Exell:addReservation}
+    requirements:
+                id: \d+
+
+exell_delete:
+    path:     /isdeleted/{id}
+    defaults: { _controller: ExellBundle:Exell:removeReservation}
+    requirements:
+                id: \d+
+
+
+exell_account:
+    path:     /account
+    defaults: { _controller: ExellBundle:Exell:showAccount}
+
+

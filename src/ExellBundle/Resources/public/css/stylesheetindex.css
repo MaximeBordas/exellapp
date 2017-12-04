@@ -1,0 +1,91 @@
+/*Index*/
+
+/* NavBar */
+.navbar{
+    margin-bottom: 0px;
+}
+/* Section 1 */
+.bg-1{
+
+}
+
+.carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+
+.carousel-caption h1 {
+    color: #fff !important;
+}
+/* Section 2 */
+.bg-2{
+    background-color: #d3d3d3;
+    padding-bottom: 20px;
+}
+
+.icon{
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.box-title{
+    display: block;
+    text-align: center;
+}
+/* Section 3 */
+.bg-3{
+    padding-bottom: 45px;
+
+}
+.video-left-content{
+    padding-top:20px;
+}
+/* Section 4 */
+.bg-4{
+
+}
+/* Section 5 */
+.bg-5{
+
+}
+/* Section 6 */
+.bg-6{
+    background-color: #2e2f30;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-text p{
+    text-align: center;
+    color: white;
+}
+
+
+/*Consult*/
+
+/*All*/
+body{
+    font-family: Open Sans, sans-serif;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+.clr{
+    clear: both;
+}
+.w150{
+    width: 150px;
+}
+
+.glyphicon{
+    font-size: 1.5em;
+}
+

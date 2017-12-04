@@ -1,0 +1,41 @@
+/*consultList*/
+
+.titleLot{
+    margin: 25px 0px 10px 0px;
+    background: #414042;
+    position: relative;
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+    border-radius:7px;
+
+}
+
+.titleLot h3{
+    color: #FFFFFF;
+    margin-left: 15px;
+}
+
+.descrHolder{
+    margin-left: 35px;
+    float: left;
+    width: 80%;
+}
+.description{
+    margin-top: 10px;
+}
+
+.imglot{
+    text-align: center;
+}
+
+.lotpicture{
+    width: 155px;
+}
+
+.nodisp{
+    display: none;
+}
+
+body{
+    background-color: lightgray;
+}

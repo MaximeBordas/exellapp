@@ -1,0 +1,158 @@
+<?php
+
+namespace ExellBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Ville
+ *
+ * @ORM\Table(name="ville")
+ * @ORM\Entity(repositoryClass="ExellBundle\Repository\VilleRepository")
+ */
+class Ville
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomVille", type="string", length=255)
+     */
+    private $nomVille;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomDepartement", type="string", length=255)
+     */
+    private $nomDepartement;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="codePostal", type="integer")
+     */
+    private $codePostal;
+
+    /*
+     * @var string
+     *
+     * @ORM\Column(name="adresse", type="string", length=255)
+     */
+    private $adresse;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nomVille
+     *
+     * @param string $nomVille
+     *
+     * @return Ville
+     */
+    public function setNomVille($nomVille)
+    {
+        $this->nomVille = $nomVille;
+
+        return $this;
+    }
+
+    /**
+     * Get nomVille
+     *
+     * @return string
+     */
+    public function getNomVille()
+    {
+        return $this->nomVille;
+    }
+
+    /**
+     * Set nomDepartement
+     *
+     * @param string $nomDepartement
+     *
+     * @return Ville
+     */
+    public function setNomDepartement($nomDepartement)
+    {
+        $this->nomDepartement = $nomDepartement;
+
+        return $this;
+    }
+
+    /**
+     * Get nomDepartement
+     *
+     * @return string
+     */
+    public function getNomDepartement()
+    {
+        return $this->nomDepartement;
+    }
+
+    /**
+     * Set codePostal
+     *
+     * @param integer $codePostal
+     *
+     * @return Ville
+     */
+    public function setCodePostal($codePostal)
+    {
+        $this->codePostal = $codePostal;
+
+        return $this;
+    }
+
+    /**
+     * Get codePostal
+     *
+     * @return int
+     */
+    public function getCodePostal()
+    {
+        return $this->codePostal;
+    }
+
+    /**
+     * Get adresse
+     *
+     *
+     * @return string
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     *
+     * set adresse
+     *
+     * @param string $adresse
+     *
+     * @return Ville
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+    }
+}

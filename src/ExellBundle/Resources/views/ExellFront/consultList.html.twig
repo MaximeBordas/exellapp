@@ -1,0 +1,89 @@
+{% extends'ExellBundle::layoutConsultList.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block list_body %}
+    <!--NAV BAR-->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('exell_homepage') }}">
+                    <img src="{{ asset('bundles/exell/image/exell.jpg') }}"  style="width: 70px; margin-top: -10px" alt="Exell-Immo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="Accueil"><a href="{{ path('exell_homepage') }}">Accueil</a></li>
+                    <li id="lots" class="active"><a href="{{ path('exell_list') }}">Voir les lots</a></li>
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mon compte <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class=""><a href="{{ path('exell_account') }}">Voirs les réservations</a></li>
+                                <li class="divider"></li>
+                                <li id="Connect"><a href="{{ path('fos_user_security_logout') }}">Se deconnecter</a></li>
+                            </ul>
+                        </li>
+                    {% else %}
+                    <li id="Connect"><a href="{{ path('fos_user_security_login') }}">Connecter</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                {% for leBien in LesBiens %}
+                <div class="titleLot">
+                    <a href="{{ path('exell_showlot',{'id':leBien.id}) }}"><h3>{{ leBien.nomBien }}</h3></a>
+                </div>
+                <div class="contentLot">
+                    <div class="piccol fl">
+                        <div class="imglot">
+                            {% for picture in leBien.images %}
+                                <a href="{{ path('exell_showlot',{'id':leBien.id}) }}"> <img class="lotpicture {% if loop.index != 1  %} nodisp {% endif %}" src="{{ picture.url }}" alt="{{ picture.alt }}"></a>
+                            {% endfor %}
+                            {% for price in leBien.prix %}
+                                <p> A partir de  : {{ price.priceMin }} €</p>
+                            {% endfor %}
+                        </div>
+                        <div class="price">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="descrHolder">
+                        <div class="categ fl">
+                            {% for categories in leBien.categories %}
+                                <p><b>Categorie</b> : {{ categories.nomCategorie }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="typeBien fr">
+                            <p><b>Type de Bien </b>: {{ leBien.nomTypeBien }}</p>
+                        </div>
+                        <div class="clr">
+                        </div>
+                        <div class="addr">
+                            <p><b>Adresse </b>: {{ leBien.adress.numeroVoie }} {{ leBien.adress.typeVoie }} {{ leBien.adress.ville }} , {{ leBien.adress.codePostal }}</p>
+                        </div>
+                        <div class="description">
+                            <p><b>Description : </b>  {{ leBien.presentation.desciption }}</p>
+                        </div>
+                        <div class="clr">
+                        </div>
+                    </div>
+                    <div class="clr footer"></div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

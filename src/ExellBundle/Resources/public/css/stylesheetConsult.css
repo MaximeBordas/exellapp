@@ -1,0 +1,48 @@
+.agency{
+    margin-top: 2%;
+}
+
+.panel-consult{
+    background: #ffffff;
+    border: 1px solid #414042;
+    margin-bottom: 5px;
+    margin-top: 25px;
+    position: relative;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.panel-content{
+    margin: 10px;
+}
+
+.title-panel-pres {
+    margin-top: -15px;
+    background: #FFFFFF;
+    width: 25%;
+    margin-left: 2%;
+}
+.title-panel-cond {
+    margin-top: -15px;
+    background: #FFFFFF;
+    width: 21%;
+    margin-left: 2%;
+}
+.title-panel-price {
+    margin-top: -15px;
+    background: #FFFFFF;
+    width: 7%;
+    margin-left: 2%;
+}
+
+.piclot{
+    width: 100%;
+}
+
+.carousel-inner>.item>img{
+    height:600px;
+}
+
+.tablespace{
+    padding-left: 1%;
+}
