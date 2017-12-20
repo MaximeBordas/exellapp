@@ -37,11 +37,11 @@
 }
 /* Section 3 */
 .bg-3{
-    padding-bottom: 45px;
+    padding-bottom: 5%;
 
 }
 .video-left-content{
-    padding-top:20px;
+    padding-top:8%;
 }
 /* Section 4 */
 .bg-4{
@@ -87,5 +87,8 @@ body{
 
 .glyphicon{
     font-size: 1.5em;
+}
+.whoami{
+    text-align: center;
 }
 

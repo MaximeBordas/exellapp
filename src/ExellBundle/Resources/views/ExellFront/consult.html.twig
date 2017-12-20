@@ -26,7 +26,10 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mon compte <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li class="active"><a href="{{ path('exell_account') }}">Voirs les réservations</a></li>
+                                <li><p class="whoami">Vous êtes : {{ app.user.username }}</p></li>
+                                <li class="divider"></li>
+                                <li class=""><a href="{{ path('exell_account') }}">Voir les réservations</a></li>
+                                <li></li>
                                 <li class="divider"></li>
                                 <li id="Connect"><a href="{{ path('fos_user_security_logout') }}">Se deconnecter</a></li>
                             </ul>
@@ -57,7 +60,7 @@
                         </div>
 
                         <!-- Left and right controls -->
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <a class="left carousel- " href="#myCarousel" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                             <span class="sr-only">Previous</span>
                         </a>

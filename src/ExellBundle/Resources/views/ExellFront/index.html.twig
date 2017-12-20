@@ -27,7 +27,9 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mon compte <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li class=""><a href="{{ path('exell_account') }}">Voirs les réservations</a></li>
+                                <li><p class="whoami">Vous êtes : {{ app.user.username }}</p></li>
+                                <li class="divider"></li>
+                                <li class=""><a href="{{ path('exell_account') }}">Voir les réservations</a></li>
                                 <li></li>
                                 <li class="divider"></li>
                                 <li id="Connect"><a href="{{ path('fos_user_security_logout') }}">Se deconnecter</a></li>
@@ -92,7 +94,9 @@
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="icon"> </div>
+                <div class="icon">
+                    <span class=" glyphicon  glyphicon-home"></span>
+                </div>
                 <div class="box-title">
                     <h3>Gestion Immobilière et Aide à la Déclaration</h3>
                 </div>
@@ -110,7 +114,7 @@
                     <h3>Découvrez la Loi Pinel et notre expertise...</h3>
                 </div>
                 <div class="video-player">
-                    <video src="https://vimeo.com/172722300"></video>
+                    <iframe src="https://player.vimeo.com/video/172722300" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
             </div>
             <div class="col-sm-6">

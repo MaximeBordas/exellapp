@@ -49,7 +49,6 @@ class Utilisateur extends BaseUser
     /**
      * Utilisateur constructor.
      */
-
     public function __construct()
     {
         parent::__construct();
