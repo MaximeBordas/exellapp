@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="062c953c-c34e-4d3d-bf78-3800b142d8fc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/exellApp.iml" afterPath="$PROJECT_DIR$/.idea/exellApp.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/ExellBundle/Entity/Utilisateur.php" afterPath="$PROJECT_DIR$/src/ExellBundle/Entity/Utilisateur.php" />
-      <change beforePath="$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetConsult.css" afterPath="$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetConsult.css" />
+      <change beforePath="$PROJECT_DIR$/src/ExellBundle/Controller/ExellController.php" afterPath="$PROJECT_DIR$/src/ExellBundle/Controller/ExellController.php" />
       <change beforePath="$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetList.css" afterPath="$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetList.css" />
-      <change beforePath="$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetindex.css" afterPath="$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetindex.css" />
       <change beforePath="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/account.html.twig" afterPath="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/account.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consult.html.twig" afterPath="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consult.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consultList.html.twig" afterPath="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consultList.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/index.html.twig" afterPath="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/index.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +14,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <executablePath>composer</executablePath>
   </component>
@@ -36,7 +30,7 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
+            <state relative-caret-position="0">
               <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="34" selection-end-column="121" />
               <folding />
             </state>
@@ -46,7 +40,7 @@
       <file leaf-file-name="consult.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consult.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
+            <state relative-caret-position="15">
               <caret line="33" column="121" lean-forward="false" selection-start-line="33" selection-start-column="121" selection-end-line="33" selection-end-column="121" />
               <folding />
             </state>
@@ -56,19 +50,34 @@
       <file leaf-file-name="account.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/account.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+            <state relative-caret-position="367">
+              <caret line="54" column="28" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+              <folding>
+                <element signature="e#2535#2542#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consultList.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consultList.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="72" column="55" lean-forward="false" selection-start-line="72" selection-start-column="55" selection-end-line="72" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="consultList.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consultList.html.twig">
+      <file leaf-file-name="ExellController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ExellBundle/Controller/ExellController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="72" column="56" lean-forward="false" selection-start-line="72" selection-start-column="56" selection-end-line="72" selection-end-column="56" />
-              <folding />
+            <state relative-caret-position="200">
+              <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="28" />
+              <folding>
+                <element signature="e#42#70#0#PHP" expanded="true" />
+                <element signature="e#1522#1559#1#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,8 +85,8 @@
       <file leaf-file-name="stylesheetList.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetList.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="44" column="1" lean-forward="false" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+            <state relative-caret-position="45">
+              <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -86,8 +95,8 @@
       <file leaf-file-name="stylesheetConsult.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetConsult.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+            <state relative-caret-position="15">
+              <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -161,7 +170,6 @@
         <option value="$PROJECT_DIR$/web/app.php" />
         <option value="$PROJECT_DIR$/src/.htaccess" />
         <option value="$PROJECT_DIR$/web/app_dev.php" />
-        <option value="$PROJECT_DIR$/src/ExellBundle/Controller/ExellController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/baseList.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/baseConsult.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
@@ -172,11 +180,12 @@
         <option value="$PROJECT_DIR$/src/ExellBundle/Entity/Utilisateur.php" />
         <option value="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/index.html.twig" />
         <option value="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consult.html.twig" />
-        <option value="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/account.html.twig" />
         <option value="$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetindex.css" />
-        <option value="$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetList.css" />
-        <option value="$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetConsult.css" />
         <option value="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consultList.html.twig" />
+        <option value="$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetConsult.css" />
+        <option value="$PROJECT_DIR$/src/ExellBundle/Controller/ExellController.php" />
+        <option value="$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetList.css" />
+        <option value="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/account.html.twig" />
       </list>
     </option>
   </component>
@@ -295,6 +304,13 @@
               <item name="exellApp" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="ExellBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="exellApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exellApp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ExellBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -313,23 +329,6 @@
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="exellApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exellApp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ExellBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="exellApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exellApp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ExellBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ExellFront" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -415,12 +414,20 @@
       <workItem from="1513264899234" duration="994000" />
       <workItem from="1513588432792" duration="6537000" />
       <workItem from="1513697858079" duration="31000" />
-      <workItem from="1513759068593" duration="189000" />
+      <workItem from="1513759068593" duration="1247000" />
+      <workItem from="1514276373829" duration="572000" />
+      <workItem from="1514298785544" duration="306000" />
+      <workItem from="1514362831695" duration="341000" />
+      <workItem from="1514535410122" duration="162000" />
+      <workItem from="1514801908585" duration="124000" />
+      <workItem from="1514802114546" duration="955000" />
+      <workItem from="1515398209448" duration="242000" />
+      <workItem from="1515400811219" duration="3922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158663000" />
+    <option name="totallyTimeSpent" value="166345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -434,7 +441,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -701,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExellBundle/Entity/Bien.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4980">
-          <caret line="333" column="4" lean-forward="false" selection-start-line="333" selection-start-column="4" selection-end-line="333" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -750,37 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExellBundle/Controller/ExellController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="48" column="41" lean-forward="false" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="34" selection-end-column="121" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consult.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="121" lean-forward="false" selection-start-line="33" selection-start-column="121" selection-end-line="33" selection-end-column="121" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/account.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetindex.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
@@ -788,27 +757,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetList.css">
+    <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="1" lean-forward="false" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="34" selection-end-column="121" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetConsult.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+        <state relative-caret-position="15">
+          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consultList.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="72" column="56" lean-forward="false" selection-start-line="72" selection-start-column="56" selection-end-line="72" selection-end-column="56" />
+        <state relative-caret-position="297">
+          <caret line="72" column="55" lean-forward="false" selection-start-line="72" selection-start-column="55" selection-end-line="72" selection-end-column="55" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExellBundle/Entity/Bien.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="333" column="4" lean-forward="false" selection-start-line="333" selection-start-column="4" selection-end-line="333" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consult.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="33" column="121" lean-forward="false" selection-start-line="33" selection-start-column="121" selection-end-line="33" selection-end-column="121" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/account.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="54" column="28" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+          <folding>
+            <element signature="e#2535#2542#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExellBundle/Controller/ExellController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="28" />
+          <folding>
+            <element signature="e#42#70#0#PHP" expanded="true" />
+            <element signature="e#1522#1559#1#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

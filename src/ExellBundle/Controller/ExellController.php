@@ -6,6 +6,7 @@ use ExellBundle\Entity\Bien;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use ExellBundle\Entity\Utilisateur;
 use Symfony\Component\HttpFoundation\Request;
+use Doctrine\DBAL\DBALException;
 
 class ExellController extends Controller
 {
@@ -34,13 +35,22 @@ class ExellController extends Controller
 
     public function addReservationAction(Bien $bien)
     {
-        $em = $this->getDoctrine()->getManager();
 
-        $user = $this->getUser();
-        $user = $user->addLesBien($bien);
+        try{
+            $em = $this->getDoctrine()->getManager();
 
-        $em->persist($user);
-        $em->flush();
+            $user = $this->getUser();
+            $user = $user->addLesBien($bien);
+
+            $em->persist($user);
+            $em->flush();
+        }
+        catch (DBALException $e){
+            $this->get('session')->getFlashBag()->add('error', 'Le bien à déjà été ajouté a votre compte.');
+            return $this->redirect($this->generateUrl('exell_account'));
+
+        }
+
 
         return $this->render('@Exell/ExellFront/account.html.twig');
     }

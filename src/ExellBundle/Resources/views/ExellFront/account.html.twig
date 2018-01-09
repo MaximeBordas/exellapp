@@ -46,6 +46,17 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
+                {% for messages in app.flashes %}
+                    {% for message in messages %}
+                        <div class="alert alert-danger alert-dismissible alreadyinaccount" role="alert">
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
                 {% for leBien in app.user.lesBiens %}
                 <div class="titleLot">
                     <a href="{{ path('exell_showlot',{'id':leBien.id}) }}"><h3>{{ leBien.nomBien }}</h3></a>
