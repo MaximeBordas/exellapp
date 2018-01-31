@@ -46,12 +46,11 @@ class ExellController extends Controller
             $em->flush();
         }
         catch (DBALException $e){
-            $this->get('session')->getFlashBag()->add('error', 'Le bien à déjà été ajouté a votre compte.');
+            $this->addFlash('danger', 'Le bien à déjà été ajouté a votre compte.');
             return $this->redirect($this->generateUrl('exell_account'));
 
         }
-
-
+        $this->addFlash('success','Le bien à éré ajouté a votre compte. Vous allez être contacté le plus tôt possible');
         return $this->render('@Exell/ExellFront/account.html.twig');
     }
     public function removeReservationAction(Bien $bien)

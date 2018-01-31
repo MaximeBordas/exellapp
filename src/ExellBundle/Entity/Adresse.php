@@ -31,14 +31,14 @@ class Adresse
     /**
      * @var int
      *
-     * @ORM\Column(name="numeroVoie", type="integer")
+     * @ORM\Column(name="numeroVoie", type="integer",nullable=true)
      */
     private $numeroVoie;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="typeVoie", type="string", length=255)
+     * @ORM\Column(name="typeVoie", type="string", length=255,nullable=true)
      */
     private $typeVoie;
 

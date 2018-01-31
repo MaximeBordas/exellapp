@@ -24,14 +24,14 @@ class Offres
     /**
      * @var string
      *
-     * @ORM\Column(name="text", type="string", length=255)
+     * @ORM\Column(name="text", type="string", length=255 ,nullable=true)
      */
     private $text;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateOffre", type="datetimetz")
+     * @ORM\Column(name="dateOffre", type="datetimetz",nullable=true)
      */
     private $dateOffre;
 

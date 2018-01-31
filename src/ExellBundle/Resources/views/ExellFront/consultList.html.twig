@@ -60,7 +60,6 @@
                             {% endfor %}
                         </div>
                         <div class="price">
-                            <p></p>
                         </div>
                     </div>
                     <div class="descrHolder">
@@ -78,7 +77,7 @@
                             <p><b>Adresse </b>: {{ leBien.adress.numeroVoie }} {{ leBien.adress.typeVoie }} {{ leBien.adress.ville }} , {{ leBien.adress.codePostal }}</p>
                         </div>
                         <div class="description">
-                            <p ><b>Description : </b>  {{ leBien.presentation.desciption }}</p>
+                            <p style="text-overflow: ellipsis;" ><b>Description : </b>  {{ leBien.presentation.desciption }}</p>
                         </div>
                         <div class="clr">
                         </div>

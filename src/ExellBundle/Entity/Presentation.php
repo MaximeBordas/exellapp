@@ -21,6 +21,14 @@ class Presentation
      */
     private $id;
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom_presentation", type="string", length=255)
+     */
+    private $nomPresentation;
+
     /**
      * @var string
      *
@@ -31,31 +39,26 @@ class Presentation
     /**
      * @var string
      *
-     * @ORM\Column(name="normes", type="string", length=255)
+     * @ORM\Column(name="normes", type="string", length=255,nullable=true)
      */
     private $normes;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="nbrLots", type="integer")
+     * @ORM\Column(name="nbrLots", type="integer",nullable=true)
      */
     private $nbrLots;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateLivraison", type="date")
+     * @ORM\Column(name="dateLivraison", type="date",nullable=true)
      */
     private $dateLivraison;
 
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="nom_presentation", type="string", length=255)
-     */
-    private $nomPresentation;
+
 
 
     /**

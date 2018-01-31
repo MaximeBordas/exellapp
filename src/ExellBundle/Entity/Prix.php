@@ -38,14 +38,14 @@ class Prix
     /**
      * @var float
      *
-     * @ORM\Column(name="price_min", type="float")
+     * @ORM\Column(name="price_min", type="float" ,nullable=true)
      */
     private $priceMin;
 
     /**
      * @var float
      *
-     * @ORM\Column(name="price_max", type="float")
+     * @ORM\Column(name="price_max", type="float",nullable=true)
      */
     private $priceMax;
 
