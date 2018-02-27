@@ -5,12 +5,12 @@ namespace ExellBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * TypeBien
+ * TypeInvest
  *
- * @ORM\Table(name="type_bien")
- * @ORM\Entity(repositoryClass="ExellBundle\Repository\TypeBienRepository")
+ * @ORM\Table(name="type_invest")
+ * @ORM\Entity(repositoryClass="ExellBundle\Repository\TypeInvestRepository")
  */
-class TypeBien
+class TypeInvest
 {
     /**
      * @var int
@@ -24,9 +24,9 @@ class TypeBien
     /**
      * @var string
      *
-     * @ORM\Column(name="libelleTypeBien", type="string", length=255)
+     * @ORM\Column(name="libelle", type="string", length=255)
      */
-    private $libelleTypeBien;
+    private $libelle;
 
 
     /**
@@ -40,31 +40,32 @@ class TypeBien
     }
 
     /**
-     * Set libelleTypeBien
+     * Set libelle
      *
-     * @param string $libelleTypeBien
+     * @param string $libelle
      *
-     * @return TypeBien
+     * @return TypeInvest
      */
-    public function setLibelleTypeBien($libelleTypeBien)
+    public function setLibelle($libelle)
     {
-        $this->libelleTypeBien = $libelleTypeBien;
+        $this->libelle = $libelle;
 
         return $this;
     }
 
     /**
-     * Get libelleTypeBien
+     * Get libelle
      *
      * @return string
      */
-    public function getLibelleTypeBien()
+    public function getLibelle()
     {
-        return $this->libelleTypeBien;
+        return $this->libelle;
     }
 
     public function __toString()
     {
-        return $this->libelleTypeBien;
+        return $this->libelle;
     }
 }
+

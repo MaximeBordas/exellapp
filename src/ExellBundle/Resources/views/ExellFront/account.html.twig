@@ -55,6 +55,8 @@
                                </button>
                             {{ message }}
                         </div>
+            </div>
+            <div class="col-sm-3">
                     {% endfor %}
                 {% endfor %}
                 {% for leBien in app.user.lesBiens %}
@@ -82,9 +84,6 @@
                                 <p><b>Categorie</b> : {{ categories.nomCategorie }}</p>
                             {% endfor %}
                         </div>
-                        <div class="typeBien fr">
-                            <p><b>Type de Bien </b>: {{ leBien.nomTypeBien }}</p>
-                        </div>
                         <div class="clr">
                         </div>
                         <div class="addr">
@@ -103,6 +102,7 @@
                     {% endif %}
                     {% endfor %}
                 </div>
+            </div>
             </div>
         </div>
     </div>

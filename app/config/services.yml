@@ -6,7 +6,7 @@ parameters:
 services:
 
     app.form.registration:
-            class: ExellBundle\Form\RegisterType
+            class: ExellBundle\Form\RegistrationType
             tags:
                 - { name: form.type, alias: app_user_registration }
     # default configuration for services in *this* file

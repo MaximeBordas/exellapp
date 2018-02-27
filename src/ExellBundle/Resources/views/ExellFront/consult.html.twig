@@ -78,7 +78,6 @@
                 {% for categ in leBien.categories %}
                     <p><b>Categorie</b> : {{ categ.nomCategorie }}</p>
                 {% endfor %}
-                    <p><b>Type de Bien</b>  :  {{ leBien.nomTypeBien }}</p>
                 <p><b>Adresse </b>: {{ leBien.adress.numeroVoie }} {{ leBien.adress.typeVoie }} {{ leBien.adress.ville }} , {{ leBien.adress.codePostal }}</p>
                 <p><b>Description du bien</b>  : {{ leBien.presentation.desciption  }}</p>
 
@@ -100,7 +99,6 @@
                                         {{ leBien.presentation.dateLivraison | date('d-m-Y ') }}
                                     </td>
                                 </tr>
-
                                 <tr>
                                     <td>
                                         <b>Dispositif Fiscal</b>

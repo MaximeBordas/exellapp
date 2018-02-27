@@ -36,7 +36,7 @@
                             </ul>
                         </li>
                     {% else %}
-                    <li id="Connect"><a href="{{ path('fos_user_security_login') }}">Connecter</a></li>
+                        <li id="Connect"><a href="{{ path('fos_user_security_login') }}">Connecter</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -45,20 +45,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-5">
-                    <div class="search-bar">
-                        {{ form_start(form) }}
-                        {{ form_widget(form) }}
-
-                        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Rechercher</button>
-
-                        {{ form_end(form) }}
-                    </div>
-                </div>
-                <div class="col-sm-4"></div>
-
-                {% for leBien in LesBiens %}
+                {% for leBien in selectedBien %}
                 <div class="titleLot col-sm-12">
                     <a href="{{ path('exell_showlot',{'id':leBien.id}) }}"><h3>{{ leBien.nomBien }}</h3></a>
                 </div>
@@ -83,7 +70,7 @@
                         </div>
                         <div class="typeBien fr">
                             {% for typeInvest in leBien.typeInvest %}
-                            <p><b>Type de Bien </b>: {{ typeInvest.libelle }}</p>
+                                <p><b>Type de Bien </b>: {{ typeInvest.libelle }}</p>
                             {% endfor %}
                         </div>
                         <div class="clr">

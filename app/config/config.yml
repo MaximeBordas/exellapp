@@ -38,6 +38,8 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    form_themes:
+      - bootstrap_3_layout.html.twig
 
 # Doctrine Configuration
 doctrine:
@@ -75,6 +77,8 @@ easy_admin:
     entities:
         - ExellBundle\Entity\Images
         - ExellBundle\Entity\Agence
+        - ExellBundle\Entity\TypeInvest
+        - ExellBundle\Entity\Departement
         - ExellBundle\Entity\Categorie
         - ExellBundle\Entity\Adresse
         - ExellBundle\Entity\Prix

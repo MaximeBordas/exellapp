@@ -32,14 +32,9 @@ class Bien
 
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="nomTypeBien", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="ExellBundle\Entity\TypeInvest",cascade={"persist"})
      */
-    private $nomTypeBien;
-
-
-
+    private $typeinvest;
 
     /**
      * @ORM\ManyToMany(targetEntity="ExellBundle\Entity\Images",cascade={"persist"})
@@ -78,6 +73,11 @@ class Bien
      * @ORM\ManyToOne(targetEntity="ExellBundle\Entity\Offres",cascade={"persist"})
      */
     private $offres;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="ExellBundle\Entity\Departement",cascade={"persist"})
+     */
+    private $departement;
 
 
 
@@ -284,30 +284,6 @@ class Bien
     }
 
     /**
-     * Set nomTypeBien
-     *
-     * @param string $nomTypeBien
-     *
-     * @return Bien
-     */
-    public function setNomTypeBien($nomTypeBien)
-    {
-        $this->nomTypeBien = $nomTypeBien;
-
-        return $this;
-    }
-
-    /**
-     * Get nomTypeBien
-     *
-     * @return string
-     */
-    public function getNomTypeBien()
-    {
-        return $this->nomTypeBien;
-    }
-
-    /**
      * Set agence
      *
      * @param \ExellBundle\Entity\Agence $agence
@@ -357,4 +333,56 @@ class Bien
     {
         return $this->offres;
     }
+
+   
+
+    /**
+     * Set departement
+     *
+     * @param \ExellBundle\Entity\Departement $departement
+     *
+     * @return Bien
+     */
+    public function setDepartement(\ExellBundle\Entity\Departement $departement = null)
+    {
+        $this->departement = $departement;
+
+        return $this;
+    }
+
+    /**
+     * Get departement
+     *
+     * @return \ExellBundle\Entity\Departement
+     */
+    public function getDepartement()
+    {
+        return $this->departement;
+    }
+
+    /**
+     * Set typeInvest
+     *
+     * @param \ExellBundle\Entity\TypeInvest $typeInvest
+     *
+     * @return Bien
+     */
+    public function setTypeInvest(\ExellBundle\Entity\TypeInvest $typeInvest = null)
+    {
+        $this->typeinvest = $typeInvest;
+
+        return $this;
+    }
+
+    /**
+     * Get typeInvest
+     *
+     * @return \ExellBundle\Entity\TypeInvest
+     */
+    public function getTypeInvest()
+    {
+        return $this->typeinvest;
+    }
+
+
 }
