@@ -11,6 +11,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use ExellBundle\Entity\Bien;
 
+
 class SearchType extends AbstractType
 {
 
@@ -47,6 +48,7 @@ class SearchType extends AbstractType
                 'required' => true,
             ],
         ));*/
+
 
         ->add('departement',TextType::class,array(
             'invalid_message' => ' Cela n\'est pas un numéro de département valide',

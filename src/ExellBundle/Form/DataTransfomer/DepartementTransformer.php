@@ -38,20 +38,21 @@ class DepartementTransformer implements DataTransformerInterface
      * @return Departement|null
      * @throws TransformationFailedException if object (departement) is not found
      */
-    public function reverseTransform($departementNumber)
+    public function reverseTransform($nomDepartement)
     {
         // TODO: Implement reverseTransform() method.
-        if(!$departementNumber)
+        if(!$nomDepartement)
         {
             return;
         }
-        $departement  = $this->em->getRepository('ExellBundle:Departement')->find($departementNumber);
+        $departement  = $this->em->getRepository('ExellBundle:Departement')->findOneBy(array('nomDepartement' => $nomDepartement));
 
         if(null === $departement)
         {
             throw  new TransformationFailedException(sprintf(
+
                 'Le departement %s n\'existe pas ! ',
-                $departementNumber
+                $nomDepartement
             ));
         }
 

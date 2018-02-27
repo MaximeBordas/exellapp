@@ -1,0 +1,6 @@
+[{% for departement in results -%}
+    {# {id: departement.id, label: departement.nomDepartement, value: departement.nomDepartement}|json_encode|raw #}
+    {# use "value" instead of "id" key, if you use jquery-ui #}
+    {{ {value: departement.id, label: departement.__toString}|json_encode|raw }}
+    {%- if not loop.last %},{% endif -%}
+{%- endfor %}]

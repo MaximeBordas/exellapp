@@ -10,4 +10,22 @@ namespace ExellBundle\Repository;
  */
 class DepartementRepository extends \Doctrine\ORM\EntityRepository
 {
+    public  function FindLikeName($term)
+    {
+        $query = $this->createQueryBuilder('q');
+        $query->where('q.nomDepartement LIKE :departement')
+            ->setParameter('departement', '%'.$term.'%');
+
+        return $query->getQuery()->getResult();
+    }
+
+    public function  findByName($string)
+    {
+        $query = $this->createQueryBuilder('q');
+        $query->where('q.nomDepartement = :nomDepartement')
+            ->setParameters(array(
+                'nomDepartement' => $string
+            ));
+        return $query->getQuery()->getResult();
+    }
 }

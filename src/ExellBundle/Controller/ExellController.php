@@ -7,6 +7,7 @@ use ExellBundle\Form\Type\SearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\DBAL\DBALException;
+use Symfony\Component\HttpFoundation\Response;
 
 class ExellController extends Controller
 {
@@ -87,4 +88,4 @@ class ExellController extends Controller
 
         return $this->render('@Exell/ExellFront/account.html.twig');
     }
-}
+    }
