@@ -34,7 +34,7 @@ class DepartementTransformer implements DataTransformerInterface
 
 
     /**
-     * @param string $departementNumber
+     * @param string $nomDepartement
      * @return Departement|null
      * @throws TransformationFailedException if object (departement) is not found
      */

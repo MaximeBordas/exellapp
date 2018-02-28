@@ -8,14 +8,22 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\DBAL\DBALException;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class ExellController extends Controller
 {
+
+    /**
+     * @Route("/",name="exell_homepage")
+     */
     public function indexAction()
     {
         return $this->render('ExellBundle:ExellFront:index.html.twig');
     }
 
+    /**
+     * @Route("/list",name="exell_list")
+     */
     public function showAllProductAction(Request $request){
 
             $bien  = new  Bien();
@@ -38,17 +46,27 @@ class ExellController extends Controller
         return $this->render('ExellBundle:ExellFront:consultList.html.twig', array('LesBiens'=>$listLot,'form'=>$formview));
     }
 
+    /**
+     * @Route("/lot/{id}",name="exell_showlot",requirements={"id"="\d*"})
+     */
     public function showProductAction(Request $request,Bien $bien){
 
         return $this->render('ExellBundle:ExellFront:consult.html.twig',array('leBien'=>$bien));
     }
 
+    /**
+     * @Route("/account",name="exell_account")
+     */
     public function showAccountAction(){
 
 
         return $this->render('ExellBundle:ExellFront:account.html.twig');
     }
 
+
+    /**
+     * @Route("/isreserved/{id}",name="exell_reserver",requirements={"id"="\d+"})
+     */
     public function addReservationAction(Bien $bien)
     {
 
@@ -71,6 +89,9 @@ class ExellController extends Controller
         return $this->render('@Exell/ExellFront/account.html.twig');
     }
 
+    /**
+     * @Route("/isdeleted/{id}",name="exell_delete",requirements={"id"="\d+"})
+     */
     public function removeReservationAction(Bien $bien)
     {
         $em = $this->getDoctrine()->getManager();
@@ -88,4 +109,6 @@ class ExellController extends Controller
 
         return $this->render('@Exell/ExellFront/account.html.twig');
     }
-    }
+
+
+}

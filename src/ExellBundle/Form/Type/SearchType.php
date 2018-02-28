@@ -51,7 +51,7 @@ class SearchType extends AbstractType
 
 
         ->add('departement',TextType::class,array(
-            'invalid_message' => ' Cela n\'est pas un numéro de département valide',
+            'invalid_message' => ' Cela n\'est pas un nom de département valide',
         ));
 
         $builder->get('departement')->addModelTransformer(new DepartementTransformer($this->transformer));
