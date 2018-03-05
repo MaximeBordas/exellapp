@@ -3,12 +3,15 @@
 namespace ExellBundle\Controller;
 
 use ExellBundle\Entity\Bien;
+use ExellBundle\Entity\Departement;
 use ExellBundle\Form\Type\SearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\DBAL\DBALException;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
 
 class ExellController extends Controller
 {
@@ -108,6 +111,34 @@ class ExellController extends Controller
         $em->flush();
 
         return $this->render('@Exell/ExellFront/account.html.twig');
+    }
+
+
+    /**
+     * @Route("/autocomplete", name="departement_autocomplete")
+     */
+    public function autocompleteAction(Request $request)
+    {
+        $names = array();
+        $term = trim(strip_tags($request->get('term')));
+
+        $em = $this->getDoctrine()->getManager();
+
+        $entities = $em->getRepository('ExellBundle:Departement')->createQueryBuilder('c')
+            ->where('c.nomDepartement LIKE :nomDepartement')
+            ->setParameter('nomDepartement', '%'.$term.'%')
+            ->getQuery()
+            ->getResult();
+
+        foreach ($entities as $entity)
+        {
+            $names[] = $entity->getNomDepartement()."({$entity->getNomDepartement()})";
+        }
+
+        $response = new JsonResponse();
+        $response->setData($names);
+
+        return $response;
     }
 
 

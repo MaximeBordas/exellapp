@@ -48,10 +48,11 @@
                 <div class="col-sm-4"></div>
                 <div class="col-sm-5">
                     <div class="search-bar">
+                        <div id="bestform"></div>
                         {{ form_start(form) }}
                         {{ form_errors(form) }}
                         {{ form_row(form.typeInvest) }}
-                        {{ form_row(form.departement) }}
+                        {{ form_row(form.departement , {'attr': {'id': 'departement'}}) }}
 
                         <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Rechercher</button>
 
@@ -105,4 +106,27 @@
             </div>
         </div>
     </div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(function() {
+            function log( message ) {
+                $( "<div>" ).text( message ).prependTo( "#bestform" );
+                $( "#bestform" ).scrollTop( 0 );
+            }
+            $( "#exellbundle_bien_departement").autocomplete({
+                source: "{{ path('departement_autocomplete') }}",
+                minLength: 2,
+                select: function( event, ui ) {
+                    $(this).val(ui.item.label);
+                    $(this).val(ui.item.value);
+                    return false;
+                },
+                change: function( event, ui ) {
+                    $( "#exellbundle_bien_departement" ).val( ui.item? ui.item.value : 0 );
+                }
+            });
+        });
+    </script>
 {% endblock %}
