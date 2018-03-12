@@ -59,3 +59,9 @@ body{
 .whoami{
     text-align: center;
 }
+
+@media screen and (min-height: 400px) and (max-height: 995px ) {
+    .descrHolder {
+        margin-left: 1%
+    }
+}

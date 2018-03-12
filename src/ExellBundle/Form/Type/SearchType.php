@@ -40,16 +40,6 @@ class SearchType extends AbstractType
                 'required' => true,
             ]
         ))
-        /*->add('departement',EntityType::class,array(
-            'placeholder' => 'Veuillez renseigner le Département',
-            'class' => 'ExellBundle\Entity\Departement',
-            'attr' => [
-                'class' => 'form-inline',
-                'required' => true,
-            ],
-        ));*/
-
-
         ->add('departement',TextType::class,array(
             'invalid_message' => ' Cela n\'est pas un nom de département valide',
         ));

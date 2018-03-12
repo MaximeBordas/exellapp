@@ -17,7 +17,6 @@ class DepartementTransformer implements DataTransformerInterface
     {
         $this->em = $em;
     }
-
     /**
      * @param Departement|null $departement
      * @return string
@@ -31,9 +30,8 @@ class DepartementTransformer implements DataTransformerInterface
         }
         return $departement->getId();
     }
-
-
     /**
+     * transform the string in the Entity
      * @param string $nomDepartement
      * @return Departement|null
      * @throws TransformationFailedException if object (departement) is not found
@@ -45,6 +43,7 @@ class DepartementTransformer implements DataTransformerInterface
         {
             return;
         }
+
         $departement  = $this->em->getRepository('ExellBundle:Departement')->findOneBy(array('nomDepartement' => $nomDepartement));
 
         if(null === $departement)
