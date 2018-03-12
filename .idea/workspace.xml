@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="062c953c-c34e-4d3d-bf78-3800b142d8fc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/exellApp.iml" afterPath="$PROJECT_DIR$/.idea/exellApp.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/ExellBundle/Form/DataTransfomer/DepartementTransformer.php" afterPath="$PROJECT_DIR$/src/ExellBundle/Form/DataTransfomer/DepartementTransformer.php" />
-      <change beforePath="$PROJECT_DIR$/src/ExellBundle/Form/Type/SearchType.php" afterPath="$PROJECT_DIR$/src/ExellBundle/Form/Type/SearchType.php" />
-      <change beforePath="$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetList.css" afterPath="$PROJECT_DIR$/src/ExellBundle/Resources/public/css/stylesheetList.css" />
-      <change beforePath="$PROJECT_DIR$/src/ExellBundle/Resources/public/js/javascript.js" afterPath="$PROJECT_DIR$/src/ExellBundle/Resources/public/js/javascript.js" />
-      <change beforePath="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consultList.html.twig" afterPath="$PROJECT_DIR$/src/ExellBundle/Resources/views/ExellFront/consultList.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,8 +50,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            <state relative-caret-position="141">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -452,12 +446,12 @@
       <workItem from="1520498544237" duration="1116000" />
       <workItem from="1520514393938" duration="539000" />
       <workItem from="1520519023679" duration="406000" />
-      <workItem from="1520842483966" duration="2512000" />
+      <workItem from="1520842483966" duration="2714000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287420000" />
+    <option name="totallyTimeSpent" value="287622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -853,8 +847,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        <state relative-caret-position="141">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
