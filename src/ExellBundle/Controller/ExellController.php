@@ -132,7 +132,7 @@ class ExellController extends Controller
 
         foreach ($entities as $entity)
         {
-            $names[] = $entity->getNomDepartement()."({$entity->getNomDepartement()})";
+            $names[] = $entity->getNomDepartement();
         }
 
         $response = new JsonResponse();
