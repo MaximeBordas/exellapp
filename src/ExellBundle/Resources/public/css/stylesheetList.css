@@ -1,5 +1,8 @@
 /*consultList*/
 
+a:hover {
+    text-decoration: none;
+}
 .alreadyinaccount{
     margin-top: 2%;
 }
@@ -37,6 +40,10 @@
 .description{
     margin-top: 10px;
     height: 20%;
+    overflow: hidden;
+}
+.price{
+    margin-left: 20px;
 }
 
 .imglot{

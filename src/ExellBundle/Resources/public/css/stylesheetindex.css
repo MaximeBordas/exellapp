@@ -1,5 +1,33 @@
 /*Index*/
+/*All*/
+body{
+    font-family: Open Sans, sans-serif;
+}
 
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+.clr{
+    clear: both;
+}
+.w150{
+    width: 150px;
+}
+
+.glyphicon{
+    font-size: 1.5em;
+}
+.whoami{
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: none;
+}
 /* NavBar */
 .navbar{
     margin-bottom: 0px;
@@ -62,33 +90,3 @@
     text-align: center;
     color: white;
 }
-
-
-/*Consult*/
-
-/*All*/
-body{
-    font-family: Open Sans, sans-serif;
-}
-
-.fl{
-    float: left;
-}
-
-.fr{
-    float: right;
-}
-.clr{
-    clear: both;
-}
-.w150{
-    width: 150px;
-}
-
-.glyphicon{
-    font-size: 1.5em;
-}
-.whoami{
-    text-align: center;
-}
-

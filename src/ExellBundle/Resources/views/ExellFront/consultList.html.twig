@@ -71,11 +71,15 @@
                             {% for picture in leBien.images %}
                                 <a href="{{ path('exell_showlot',{'id':leBien.id}) }}"> <img class="lotpicture {% if loop.index != 1  %} nodisp {% endif %}" src="{{ picture.url }}" alt="{{ picture.alt }}"></a>
                             {% endfor %}
+
+                        </div>
+                        <div class="price">
                             {% for price in leBien.prix %}
                                 <p> A partir de  : {{ price.priceMin }} €</p>
                             {% endfor %}
                         </div>
-                        <div class="price">
+                        <div class="btn">
+                            <a type="button" class="btn btn-info" href="{{ path('exell_showlot',{'id' : leBien.id}) }}">Vous voulez me voir ?</a>
                         </div>
                     </div>
                     <div class="descrHolder">
@@ -95,7 +99,7 @@
                             <p><b>Adresse </b>: {{ leBien.adress.numeroVoie }} {{ leBien.adress.typeVoie }} {{ leBien.adress.ville }} , {{ leBien.adress.codePostal }}</p>
                         </div>
                         <div class="description">
-                            <p style="text-overflow: ellipsis;" ><b>Description : </b>  {{ leBien.presentation.desciption }}</p>
+                            <p><b>Description : </b>  {{ leBien.presentation.desciption }}</p>
                         </div>
                         <div class="clr">
                         </div>
