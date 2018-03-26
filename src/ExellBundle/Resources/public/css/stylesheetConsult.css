@@ -3,6 +3,11 @@ a:hover {
     text-decoration: none;
 }
 
+.logoexell{
+    width: 70px;
+    margin-top: -10px;
+}
+
 .agency{
     margin-top: 2%;
 }
