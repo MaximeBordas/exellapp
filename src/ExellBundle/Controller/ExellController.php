@@ -88,7 +88,7 @@ class ExellController extends Controller
             return $this->redirect($this->generateUrl('exell_account'));
 
         }
-        $this->addFlash('success','Le bien à éré ajouté a votre compte. Vous allez être contacté le plus tôt possible');
+        $this->addFlash('success','Le bien à été ajouté a votre compte. Vous allez être contacté le plus tôt possible');
         return $this->render('@Exell/ExellFront/account.html.twig');
     }
 
@@ -114,31 +114,18 @@ class ExellController extends Controller
     }
 
 
-    /**
-     * @Route("/autocomplete", name="departement_autocomplete")
-     */
-    public function autocompleteAction(Request $request)
-    {
-        $names = array();
-        $term = trim(strip_tags($request->get('term')));
+    public function howToReserverAction(){
 
-        $em = $this->getDoctrine()->getManager();
+    }
 
-        $entities = $em->getRepository('ExellBundle:Departement')->createQueryBuilder('c')
-            ->where('c.nomDepartement LIKE :nomDepartement')
-            ->setParameter('nomDepartement', '%'.$term.'%')
-            ->getQuery()
-            ->getResult();
+    public function showPiecesAFournirAction(){
 
-        foreach ($entities as $entity)
-        {
-            $names[] = $entity->getNomDepartement();
-        }
+    }
+    public function addPiecesAFournirAction(){
 
-        $response = new JsonResponse();
-        $response->setData($names);
+    }
+    public function deletePiecesAFournirAction(){
 
-        return $response;
     }
 
 

@@ -33,12 +33,15 @@
                             <li class=""><a href="{{ path('exell_account') }}">Voir les réservations</a></li>
                             <li></li>
                             <li class="divider"></li>
+                            <li class="documents" ><a href=""> Mes documents</a></li>
+                            <li class="divider"></li>
                             <li id="Connect"><a href="{{ path('fos_user_security_logout') }}">Se deconnecter</a></li>
                         </ul>
                     </li>
                 {% else %}
                     <li id="Connect"><a href="{{ path('fos_user_security_login') }}">Connecter</a></li>
                 {% endif %}
+                <li class="iconNav"><a href=""><i class="fas fa-question-circle"></i></a></li>
             </ul>
         </div>
     </div>
@@ -56,7 +59,7 @@
                             {{ message }}
                         </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-12">
                     {% endfor %}
                 {% endfor %}
                 {% for leBien in app.user.lesBiens %}
@@ -75,7 +78,7 @@
                             {% endfor %}
                         </div>
                         <div class="price">
-                            <p></p>
+                            <p>{{ app.user.getNumeroTel() }}</p>
                         </div>
                     </div>
                     <div class="descrHolder">

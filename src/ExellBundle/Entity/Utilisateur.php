@@ -34,7 +34,7 @@ class Utilisateur extends BaseUser
      * @ORM\Column(name="numero_tel", type="integer")
      *
      * @Assert\Length(
-     *     min="10"
+     *     min="9"
      * )
      */
     private $numeroTel;

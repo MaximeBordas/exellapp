@@ -32,12 +32,15 @@
                                 <li class=""><a href="{{ path('exell_account') }}">Voir les réservations</a></li>
                                 <li></li>
                                 <li class="divider"></li>
-                                <li id="Connect"><a href="{{ path('fos_user_security_logout') }}">Se deconnecter</a></li>
+                                <li class="documents" ><a href=""> Mes documents</a></li>
+                                <li class="divider"></li>                                <li id="Connect"><a href="{{ path('fos_user_security_logout') }}">Se deconnecter</a></li>
                             </ul>
                         </li>
                     {% else %}
                     <li id="Connect"><a href="{{ path('fos_user_security_login') }}">Connecter</a></li>
                     {% endif %}
+                    <li class="iconNav"><a href=""><i class="fas fa-question-circle"></i></a></li>
+
                 </ul>
             </div>
         </div>
