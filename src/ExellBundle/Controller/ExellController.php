@@ -5,6 +5,7 @@ namespace ExellBundle\Controller;
 use ExellBundle\Entity\Bien;
 use ExellBundle\Entity\Departement;
 use ExellBundle\Form\Type\SearchType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -126,6 +127,29 @@ class ExellController extends Controller
     }
     public function deletePiecesAFournirAction(){
 
+    }
+
+    /**
+     * @throws \Nexmo\Client\Exception\Exception
+     * @throws \Nexmo\Client\Exception\Request
+     * @throws \Nexmo\Client\Exception\Server
+     *
+     * @Route("" ,name="send_sms")
+     * @Method("POST")
+     */
+    public function sendSMSAction(Request $request){
+
+
+        $uriPost = "https://rest.nexmo.com /sms/json";
+        $basic  = new \Nexmo\Client\Credentials\Basic('89b7a088', 'O96FFN5VYECt9b0E');
+        $client = new \Nexmo\Client($basic);
+
+
+        $message = $client->message->send([
+            'to' => '33632448829',
+            'from' => 'Exell',
+            'text' => 'Maxime'
+        ]);
     }
 
 

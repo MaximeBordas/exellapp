@@ -98,3 +98,6 @@ fos_user:
     from_email:
         address: conact@exellfinance.com
         sender_name: Exell
+
+vich_uploader:
+    db_driver: orm

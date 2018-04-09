@@ -31,7 +31,7 @@ class Utilisateur extends BaseUser
     /**
      * @var int
      *
-     * @ORM\Column(name="numero_tel", type="integer")
+     * @ORM\Column(name="numero_tel", type="bigint")
      *
      * @Assert\Length(
      *     min="9"
