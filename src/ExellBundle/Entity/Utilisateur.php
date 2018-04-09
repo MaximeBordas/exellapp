@@ -11,12 +11,15 @@ namespace ExellBundle\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="utilisateur")
+ * @Vich\Uploadable()
  */
 class Utilisateur extends BaseUser
 {
@@ -40,6 +43,18 @@ class Utilisateur extends BaseUser
     private $numeroTel;
 
     /**
+     * @ORM\Column(type="string", length=255,nullable=true)
+     * @var string
+     */
+    private $carteIdentite;
+
+    /**
+     * @Vich\UploadableField(mapping="user_carteidentite", fileNameProperty="carteIdentite")
+     * @var File
+     */
+    private $carteIdentiteFile;
+
+    /**
      * @ORM\ManyToMany(targetEntity="ExellBundle\Entity\Bien",cascade={"persist"})
      *
      */
@@ -52,7 +67,6 @@ class Utilisateur extends BaseUser
     public function __construct()
     {
         parent::__construct();
-
     }
 
     /**
@@ -111,5 +125,46 @@ class Utilisateur extends BaseUser
     public function getLesBiens()
     {
         return $this->lesBiens;
+    }
+
+    /**
+     * Set carteIdentite
+     *
+     * @param string $carteIdentite
+     *
+     * @return Utilisateur
+     */
+    public function setCarteIdentite($carteIdentite)
+    {
+        $this->carteIdentite = $carteIdentite;
+
+        return $this;
+    }
+
+    /**
+     * Get carteIdentite
+     *
+     * @return string
+     */
+    public function getCarteIdentite()
+    {
+        return $this->carteIdentite;
+    }
+
+    /**
+     * @param File|null $carteIdentite
+     */
+    public function setCarteIdentiteFile(File $carteIdentite = null)
+    {
+        $this->carteIdentiteFile = $carteIdentite;
+
+    }
+
+    /**
+     * @return File
+     */
+    public function getCarteIdentiteFile()
+    {
+        return $this->carteIdentiteFile;
     }
 }

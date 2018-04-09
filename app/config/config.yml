@@ -8,6 +8,7 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
+    app.path.user_carteidentite: /ExellBundle/Ressources/public/upload/cni
 
 framework:
     #esi: ~
@@ -72,6 +73,13 @@ swiftmailer:
     spool: { type: memory }
 
 
+vich_uploader:
+    db_driver: orm
+    mappings:
+        user_carteidentite:
+            uri_prefix: '%app.path.user_carteidentite%'
+            upload_destination: '%kernel.root_dir%/../web/public/upload/cni'
+
 easy_admin:
     site_name: 'Exell'
     entities:
@@ -98,6 +106,3 @@ fos_user:
     from_email:
         address: conact@exellfinance.com
         sender_name: Exell
-
-vich_uploader:
-    db_driver: orm
