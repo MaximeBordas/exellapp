@@ -42,6 +42,13 @@ class Utilisateur extends BaseUser
      */
     private $numeroTel;
 
+
+    /**
+     * @Vich\UploadableField(mapping="user_carteidentite", fileNameProperty="carteIdentite")
+     * @var File
+     */
+    private $carteIdentiteFile;
+
     /**
      * @ORM\Column(type="string", length=255,nullable=true)
      * @var string
@@ -49,10 +56,10 @@ class Utilisateur extends BaseUser
     private $carteIdentite;
 
     /**
-     * @Vich\UploadableField(mapping="user_carteidentite", fileNameProperty="carteIdentite")
-     * @var File
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
      */
-    private $carteIdentiteFile;
+    private $updatedAt;
 
     /**
      * @ORM\ManyToMany(targetEntity="ExellBundle\Entity\Bien",cascade={"persist"})
@@ -152,11 +159,16 @@ class Utilisateur extends BaseUser
     }
 
     /**
-     * @param File|null $carteIdentite
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $carteIdentite
+     * @throws \Exception
      */
     public function setCarteIdentiteFile(File $carteIdentite = null)
     {
         $this->carteIdentiteFile = $carteIdentite;
+
+        if ($carteIdentite) {
+            $this->updatedAt = new \DateTimeImmutable();
+        }
 
     }
 
@@ -166,5 +178,29 @@ class Utilisateur extends BaseUser
     public function getCarteIdentiteFile()
     {
         return $this->carteIdentiteFile;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @return Utilisateur
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
     }
 }

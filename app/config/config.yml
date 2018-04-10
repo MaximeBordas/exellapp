@@ -8,7 +8,7 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
-    app.path.user_carteidentite: /ExellBundle/Ressources/public/upload/cni
+    app.path.user_carteidentite: /cni
 
 framework:
     #esi: ~
@@ -78,7 +78,7 @@ vich_uploader:
     mappings:
         user_carteidentite:
             uri_prefix: '%app.path.user_carteidentite%'
-            upload_destination: '%kernel.root_dir%/../web/public/upload/cni'
+            upload_destination: '%kernel.root_dir%/../web/cni'
 
 easy_admin:
     site_name: 'Exell'

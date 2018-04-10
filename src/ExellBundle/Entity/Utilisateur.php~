@@ -43,7 +43,7 @@ class Utilisateur extends BaseUser
     private $numeroTel;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255,nullable=true)
      * @var string
      */
     private $carteIdentite;
@@ -53,6 +53,12 @@ class Utilisateur extends BaseUser
      * @var File
      */
     private $carteIdentiteFile;
+
+    /**
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
+     */
+    private $updatedAt;
 
     /**
      * @ORM\ManyToMany(targetEntity="ExellBundle\Entity\Bien",cascade={"persist"})
@@ -152,11 +158,15 @@ class Utilisateur extends BaseUser
     }
 
     /**
-     * @param File|null $carteIdentite
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $carteIdentite
      */
     public function setCarteIdentiteFile(File $carteIdentite = null)
     {
         $this->carteIdentiteFile = $carteIdentite;
+
+        if ($carteIdentite) {
+            $this->updatedAt = new \DateTime('now');
+        }
 
     }
 
@@ -166,5 +176,29 @@ class Utilisateur extends BaseUser
     public function getCarteIdentiteFile()
     {
         return $this->carteIdentiteFile;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @return Utilisateur
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
     }
 }

@@ -1,0 +1,13 @@
+{% extends'@Exell/layoutConsultList.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block list_body %}
+    <h1>Ajout d'une carte d'indentité</h1>
+    {{ form_start(form) }}
+    {{ form_row(form.carteIdentiteFile) }}
+    <button type="submit" class="btn btn-success">Ajout de la carte d'identité</button>
+    {{ form_end(form) }}
+{% endblock %}
