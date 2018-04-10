@@ -5,9 +5,59 @@
 {% endblock %}
 
 {% block list_body %}
-    <h1>Ajout d'une carte d'indentité</h1>
-    {{ form_start(form) }}
-    {{ form_row(form.carteIdentiteFile) }}
-    <button type="submit" class="btn btn-success">Ajout de la carte d'identité</button>
-    {{ form_end(form) }}
+    <!--NAV BAR-->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('exell_homepage') }}">
+                    <img src="{{ asset('bundles/exell/image/exell.jpg') }}"  class="logoexell"  alt="Exell-Immo">
+                </a>
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="Accueil" class=""><a href="{{ path('exell_homepage') }}">Accueil</a></li>
+                    <li id="lots"><a href="{{ path('exell_list') }}">Voir les lots</a></li>
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mon compte <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><p class="whoami">Vous êtes : {{ app.user.username }}</p></li>
+                                <li class="divider"></li>
+                                <li class=""><a href="{{ path('exell_account') }}">Voir les réservations</a></li>
+                                <li></li>
+                                <li class="divider"></li>
+                                <li class="documents" ><a href="{{ path('documents_user') }}"> Mes documents</a></li>
+                                <li class="divider"></li>
+                                <li id="Connect"><a href="{{ path('fos_user_security_logout') }}">Se deconnecter</a></li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li id="Connect"><a href="{{ path('fos_user_security_login') }}">Connecter</a></li>
+                    {% endif %}
+                    <li class="iconNav"><a href=""><i class="fas fa-question-circle"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Ajout d'une carte d'indentité</h1>
+                {{ form_start(form) }}
+                {{ form_row(form.carteIdentiteFile) }}
+                <button type="submit" class="btn btn-success">Ajout de la carte d'identité</button>
+                {{ form_end(form) }}
+            </div>
+            <div class="col-md-6">
+                <img src="{{ vich_uploader_asset(app.user, 'carteIdentiteFile') }}" alt="SHOW ME"/>
+            </div>
+        </div>
+    </div>
 {% endblock %}
