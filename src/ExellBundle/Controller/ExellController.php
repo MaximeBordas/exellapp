@@ -149,10 +149,6 @@ class ExellController extends Controller
        ));
 
     }
-    public function deletePiecesAFournirAction(){
-        $user = $this->getUser();
-
-    }
 
     /**
      * @throws \Nexmo\Client\Exception\Exception
