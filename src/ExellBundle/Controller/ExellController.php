@@ -114,7 +114,11 @@ class ExellController extends Controller
     }
 
 
+    /**
+     * @Route("/reserver",name="how_to_reserver")
+     */
     public function howToReserverAction(){
+        return $this->render('@Exell/ExellFront/howtoreserver.html.twig');
     }
 
     /**
