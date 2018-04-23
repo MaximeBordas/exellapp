@@ -168,8 +168,7 @@ class ExellController extends Controller
         $uriPost = "https://rest.nexmo.com /sms/json";
         $basic  = new \Nexmo\Client\Credentials\Basic('89b7a088', 'O96FFN5VYECt9b0E');
         $client = new \Nexmo\Client($basic);
-
-
+        
         $message = $client->message->send([
             'to' => '33632448829',
             'from' => 'Exell',
