@@ -9,6 +9,7 @@ use ExellBundle\Form\Type\SearchType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Doctrine\DBAL\DBALException;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -162,10 +163,11 @@ class ExellController extends Controller
      * @Route("" ,name="send_sms")
      * @Method("POST")
      */
-    public function sendSMSAction(Request $request){
+    public function sendSMSAction(){
 
 
-        $uriPost = "https://rest.nexmo.com /sms/json";
+        $restClient = $this->container->get('circle.restclient');
+        $uriPost = "https://rest.nexmo.com/sms/json";
         $basic  = new \Nexmo\Client\Credentials\Basic('89b7a088', 'O96FFN5VYECt9b0E');
         $client = new \Nexmo\Client($basic);
         
@@ -174,6 +176,7 @@ class ExellController extends Controller
             'from' => 'Exell',
             'text' => 'Maxime'
         ]);
+         return $restClient->post($uriPost,$message);
     }
 
 

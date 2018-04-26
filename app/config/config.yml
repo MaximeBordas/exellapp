@@ -106,3 +106,9 @@ fos_user:
     from_email:
         address: conact@exellfinance.com
         sender_name: Exell
+
+circle_rest_client:
+    curl:
+      defaults:
+        CURLOPT_HTTPHEADER:     [ 'Content-Type: application/json' ]
+        CURLOPT_FOLLOWLOCATION: true
