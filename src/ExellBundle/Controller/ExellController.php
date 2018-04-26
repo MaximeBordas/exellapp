@@ -9,7 +9,6 @@ use ExellBundle\Form\Type\SearchType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Doctrine\DBAL\DBALException;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -53,7 +52,7 @@ class ExellController extends Controller
     /**
      * @Route("/lot/{id}",name="exell_showlot",requirements={"id"="\d*"})
      */
-    public function showProductAction(Request $request,Bien $bien){
+    public function showProductAction(Bien $bien){
 
         return $this->render('ExellBundle:ExellFront:consult.html.twig',array('leBien'=>$bien));
     }
@@ -167,12 +166,13 @@ class ExellController extends Controller
 
 
         $restClient = $this->container->get('circle.restclient');
+        $userPhone = $this->getUser()->getNumeroTel();
         $uriPost = "https://rest.nexmo.com/sms/json";
         $basic  = new \Nexmo\Client\Credentials\Basic('89b7a088', 'O96FFN5VYECt9b0E');
         $client = new \Nexmo\Client($basic);
         
         $message = $client->message->send([
-            'to' => '33632448829',
+            'to' => $userPhone,
             'from' => 'Exell',
             'text' => 'Maxime'
         ]);
