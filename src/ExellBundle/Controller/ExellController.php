@@ -162,21 +162,27 @@ class ExellController extends Controller
      * @Route("" ,name="send_sms")
      * @Method("POST")
      */
-    public function sendSMSAction(){
+    public function sendSMSAction(Request $request){
 
 
-        $restClient = $this->container->get('circle.restclient');
-        $userPhone = $this->getUser()->getNumeroTel();
-        $uriPost = "https://rest.nexmo.com/sms/json";
-        $basic  = new \Nexmo\Client\Credentials\Basic('89b7a088', 'O96FFN5VYECt9b0E');
-        $client = new \Nexmo\Client($basic);
-        
-        $message = $client->message->send([
-            'to' => $userPhone,
-            'from' => 'Exell',
-            'text' => 'Maxime'
-        ]);
-         return $restClient->post($uriPost,$message);
+        if($request->isMethod('POST')){
+            $restClient = $this->container->get('circle.restclient');
+            $userPhone = $this->getUser()->getNumeroTel();
+            $uriPost = "https://rest.nexmo.com/sms/json";
+            $basic  = new \Nexmo\Client\Credentials\Basic('89b7a088', 'O96FFN5VYECt9b0E');
+            $client = new \Nexmo\Client($basic);
+
+            $message = $client->message->send([
+                'to' => '33632448829',
+                'from' => 'Exell',
+                'text' => 'Maxime'
+            ]);
+            return $restClient->post($uriPost,$message);
+        }
+        else{
+            return $this->render('@Exell/ExellFront/index.html.twig');
+        }
+
     }
 
 
