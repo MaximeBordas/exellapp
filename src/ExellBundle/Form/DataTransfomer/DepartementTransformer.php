@@ -23,7 +23,6 @@ class DepartementTransformer implements DataTransformerInterface
      */
     public function transform($departement)
     {
-        // TODO: Implement transform() method.
         if(null == $departement)
         {
             return '';
@@ -38,7 +37,6 @@ class DepartementTransformer implements DataTransformerInterface
      */
     public function reverseTransform($nomDepartement)
     {
-        // TODO: Implement reverseTransform() method.
         if(!$nomDepartement)
         {
             return;

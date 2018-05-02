@@ -72,7 +72,6 @@ class ExellController extends Controller
      */
     public function addReservationAction(Bien $bien)
     {
-
         try
         {
             $em = $this->getDoctrine()->getManager();
@@ -99,8 +98,6 @@ class ExellController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-
-
         if(!$bien ){
             throw $this->createNotFoundException('Pas de bien pour le bien avec le numéro identifiant '.$bien);
         }
@@ -109,7 +106,6 @@ class ExellController extends Controller
         $user = $user->removeLesBien($bien);
 
         $em->flush();
-
         return $this->render('@Exell/ExellFront/account.html.twig');
     }
 
@@ -145,13 +141,11 @@ class ExellController extends Controller
             ));
         }
         $formView = $form->createView();
-
         $cni = $user->getCarteIdentite();
        return $this->render('@Exell/ExellFront/documents.html.twig', array(
            'form' => $formView,
            'cni' => $cni
        ));
-
     }
 
     /**
@@ -163,7 +157,6 @@ class ExellController extends Controller
      * @Method("POST")
      */
     public function sendSMSAction(Request $request){
-
 
         if($request->isMethod('POST')){
             $restClient = $this->container->get('circle.restclient');
@@ -182,8 +175,5 @@ class ExellController extends Controller
         else{
             return $this->render('@Exell/ExellFront/index.html.twig');
         }
-
     }
-
-
 }
