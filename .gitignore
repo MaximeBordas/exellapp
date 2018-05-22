@@ -67,3 +67,4 @@
 /.web-server-pid
 
 .DS_Store
+*.icloud
