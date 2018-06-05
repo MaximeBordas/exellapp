@@ -153,7 +153,7 @@ class ExellController extends Controller
      * @throws \Nexmo\Client\Exception\Request
      * @throws \Nexmo\Client\Exception\Server
      *
-     * @Route("" ,name="send_sms")
+     * @Route("/sms" ,name="send_sms")
      * @Method("POST")
      */
     public function sendSMSAction(Request $request){
