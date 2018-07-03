@@ -46,6 +46,9 @@ a:hover {
     width: 100%; /* Set width to 100% */
     margin: auto;
 }
+.carousel-caption{
+    margin-left: auto;
+}
 
 .carousel-caption h1 {
     color: #fff !important;

@@ -98,18 +98,44 @@ easy_admin:
         form_theme: 'vertical'
         brand_color: '#264ACA'
         color_scheme: 'light'
+        menu:
+            - {label: 'Images des biens'}
+            - {entity: 'Images' }
+            - {label: 'Agence qui est rattacher au bien'}
+            - {entity: 'Agence' }
+            - {label: 'Type pour investissement '}
+            - {entity: 'TypeInvest' }
+            - {label: 'Département et Adresse du bien'}
+            - {entity: 'Departement' }
+            - {entity: 'Adresse' }
+            - {label: 'Categorie du bien (Villa, Appartement) '}
+            - {entity: 'Categorie' }
+            - {label: 'Prix du Bien '}
+            - {entity: 'Prix' }
+            - {label: 'Présentation du bien'}
+            - {entity: 'Presentation'}
+            - {label: 'Offres spécifique ( frais de notaire par exemple ) '}
+            - {entity: 'Offres' }
+            - {entity: 'Bien' }
+            - {label: 'Partie utilisateur'}
+            - {entity: 'Utilisateur' }
+
 
 
 fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
     user_class: ExellBundle\Entity\Utilisateur
+    service:
+        mailer: fos_user.mailer.default
     registration:
+        confirmation:
+            enabled: true
         form:
           type: ExellBundle\Form\RegistrationType
     from_email:
-        address: conact@exellfinance.com
-        sender_name: Exell
+        address: contact@exellfinance.com
+        sender_name: Exell Fincance
 
 circle_rest_client:
     curl:

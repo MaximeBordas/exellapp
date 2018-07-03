@@ -83,7 +83,7 @@
                     <p><b>Categorie</b> : {{ categ.nomCategorie }}</p>
                 {% endfor %}
                 <p><b>Adresse </b>: {{ leBien.adress.numeroVoie }} {{ leBien.adress.typeVoie }} {{ leBien.adress.ville }} , {{ leBien.adress.codePostal }}</p>
-                <p><b>Description du bien</b>  : {{ leBien.presentation.desciption  }}</p>
+                <p><b>Description du bien</b>  : {{ leBien.presentation.description  }}</p>
 
                 <a href="{{ path('exell_reserver',{id:leBien.id})}}"><button type="submit" class="btn btn-info btn-lg">Reserver</button></a>
             </div>

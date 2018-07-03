@@ -66,7 +66,7 @@ class Presentation
      *
      * @ORM\Column(name="description", type="text")
      */
-    private $desciption;
+    private $description;
 
 
     /**
@@ -206,26 +206,26 @@ class Presentation
     }
 
     /**
-     * Set desciption
+     * Set description
      *
-     * @param string $desciption
+     * @param string $description
      *
      * @return Presentation
      */
-    public function setDesciption($desciption)
+    public function setDescription($description)
     {
-        $this->desciption = $desciption;
+        $this->description = $description;
 
         return $this;
     }
 
     /**
-     * Get desciption
+     * Get description
      *
      * @return string
      */
-    public function getDesciption()
+    public function getDescription()
     {
-        return $this->desciption;
+        return $this->description;
     }
 }
