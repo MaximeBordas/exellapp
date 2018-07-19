@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li id="Accueil"><a href="{{ path('exell_homepage') }}">Accueil</a></li>
-                    <li id="lots" class="active"><a href="{{ path('exell_list') }}">Voir les lots</a></li>
+                    <li id="lots" class="active"><a href="{{ path('exell_list') }}">Voir les programmes</a></li>
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mon compte <span class="caret"></span>
@@ -38,7 +38,7 @@
                             </ul>
                         </li>
                     {% else %}
-                    <li id="Connect"><a href="{{ path('fos_user_security_login') }}">Connecter</a></li>
+                    <li id="Connect"><a href="{{ path('fos_user_security_login') }}">Se connecter</a></li>
                     {% endif %}
                     <li class="iconNav"><a href="{{ path('how_to_reserver') }}"><i class="fas fa-question-circle"></i></a></li>
                 </ul>

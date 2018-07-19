@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li id="Accueil" class=""><a href="{{ path('exell_homepage') }}">Accueil</a></li>
-                    <li id="lots"><a href="{{ path('exell_list') }}">Voir les lots</a></li>
+                    <li id="lots"><a href="{{ path('exell_list') }}">Voir les programmes</a></li>
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mon compte <span class="caret"></span>
@@ -39,7 +39,7 @@
                             </ul>
                         </li>
                     {% else %}
-                        <li id="Connect"><a href="{{ path('fos_user_security_login') }}">Connecter</a></li>
+                        <li id="Connect"><a href="{{ path('fos_user_security_login') }}">Se connecter</a></li>
                     {% endif %}
                     <li class="iconNav"><a href="{{ path('how_to_reserver') }}"><i class="fas fa-question-circle"></i></a></li>
                 </ul>
@@ -53,11 +53,11 @@
                 <h1>
                     Exell Votre partenaire pour investir.
                 </h1>
-                <p>Cette platemeforme d'Exell vous permet de réserver le lot de votre choix dans la résidence de votre choix,
+                <p>Cette platemeforme d'Exell vous permet de réserver le programme de votre choix dans la résidence de votre choix,
                 et de vous faire accompagner le plus simplement afin que les démarches soient le plus aisé possible.</p>
                 <h3>Plusieurs étapes sont à respecter :</h3>
                 <ul>
-                    <li>Créer son compte (Il vous permet de voir les lots disponible et de les optionner)</li>
+                    <li>Créer son compte (Il vous permet d'optionner les programmes disponible)</li>
                     <li>Ajouter vos pièces du dossier ( Carte identité ect)</li>
                 </ul>
             </div>
@@ -71,23 +71,23 @@
         </div>
         <div class="row" style="padding-top: 5%;">
             <div class="col-md-6">
-                <img src="{{ asset('bundles/exell/image/exempleLot.png') }}" alt="exemple lot vanneau" style="width: 90%">
+                <img src="{{ asset('bundles/exell/image/exempleLot.png') }}" alt="exemple programme vanneau" style="width: 90%">
             </div>
             <div class="col-md-6">
                 <p>
-                    Vous avez vu le lot de vos rêves ? Réservez le ! Le lot est alors enregistré et cela permet aux administrateurs du site de vous contactez pour ce lot spécifique.
+                    Vous avez vu le programme de vos rêves ? Réservez le ! Le programme est alors enregistré et cela permet aux administrateurs du site de vous contactez pour ce lot spécifique.
                 </p>
             </div>
         </div>
         <div class="row" style="padding-top: 5%;">
             <div class="col-md-6">
                 <p>
-                    Pour voir les Lots que vous avez reservé il vous suffit d'aller dans la partie "Voir les réservations" pour voir tous les lots optionné.
+                    Pour voir les programmes que vous avez reservé il vous suffit d'aller dans la partie "Voir les réservations" pour voir tous les programmes optionné.
                     Vous pouvez également supprimer une résevation en cliquant sur le bouton : Annuler la réservation.
                 </p>
             </div>
             <div class="col-md-6">
-                <img src="{{ asset('bundles/exell/image/front.png') }}" alt="">
+                <img src="{{ asset('bundles/exell/image/front.png') }}" alt="ByNeuf Responsiv">
             </div>
         </div>
     </div>

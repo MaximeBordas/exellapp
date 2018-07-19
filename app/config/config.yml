@@ -81,20 +81,41 @@ vich_uploader:
             upload_destination: '%kernel.root_dir%/../web/cni'
 
 easy_admin:
-    site_name: 'ByNeuf'
+    site_name: 'ByNeuf par Exell Finance'
     entities:
-        - ExellBundle\Entity\Images
-        - ExellBundle\Entity\Agence
-        - ExellBundle\Entity\TypeInvest
-        - ExellBundle\Entity\Departement
-        - ExellBundle\Entity\Categorie
-        - ExellBundle\Entity\Adresse
-        - ExellBundle\Entity\Prix
-        - ExellBundle\Entity\Presentation
-        - ExellBundle\Entity\Offres
-        - ExellBundle\Entity\Bien
-        - ExellBundle\Entity\Utilisateur
+        Images:
+            class: ExellBundle\Entity\Images
+        Agence:
+            class: ExellBundle\Entity\Agence
+        TypeInvest:
+            class: ExellBundle\Entity\TypeInvest
+        Departement:
+            class: ExellBundle\Entity\Departement
+        Categorie:
+            class: ExellBundle\Entity\Categorie
+        Adresse:
+            class: ExellBundle\Entity\Adresse
+        Prix:
+            class: ExellBundle\Entity\Prix
+        Presentation:
+            class: ExellBundle\Entity\Presentation
+        Offres:
+            class: ExellBundle\Entity\Offres
+        Bien:
+            class: ExellBundle\Entity\Bien
+        Utilisateur:
+            class: ExellBundle\Entity\Utilisateur
+            list:
+                fields: ['email','numeroTel','lesBiens']
+            form:
+                fields:
+                    - { property: 'email', label: 'Adresse Email'}
+                    - { property: 'numeroTel', label: 'Numéro de téléphone'}
+                    - { property: 'lesBiens', label: 'Les programmes réservé par le client'}
+
     design:
+        assets:
+            favicon: 'bundles/exell/image/favicon16.png'
         form_theme: 'vertical'
         brand_color: '#264ACA'
         color_scheme: 'light'
@@ -118,7 +139,7 @@ easy_admin:
             - {entity: 'Offres' }
             - {entity: 'Bien' }
             - {label: 'Partie utilisateur'}
-            - {entity: 'Utilisateur' }
+            - {entity: 'Utilisateur', default: true }
 
 
 

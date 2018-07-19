@@ -6,7 +6,6 @@ use ExellBundle\Entity\Bien;
 use ExellBundle\Entity\Utilisateur;
 use ExellBundle\Form\Type\CarteIdentiteType;
 use ExellBundle\Form\Type\SearchType;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\DBAL\DBALException;
@@ -146,32 +145,5 @@ class ExellController extends Controller
            'form' => $formView,
            'cni' => $cni
        ));
-    }
-
-    /**
-     * @throws \Nexmo\Client\Exception\Exception
-     *
-     * @Route("/sms" ,name="send_sms")
-     * @Method("POST")
-     */
-    public function sendSMSAction(Request $request){
-
-        if($request->isMethod('POST')){
-            $restClient = $this->container->get('circle.restclient');
-            $userPhone = $this->getUser()->getNumeroTel();
-            $uriPost = "https://rest.nexmo.com/sms/json";
-            $basic  = new \Nexmo\Client\Credentials\Basic('89b7a088', 'O96FFN5VYECt9b0E');
-            $client = new \Nexmo\Client($basic);
-
-            $message = $client->message->send([
-                'to' => '33632448829',
-                'from' => 'Exell',
-                'text' => 'Maxime'
-            ]);
-            return $restClient->post($uriPost,$message);
-        }
-        else{
-            return $this->render('@Exell/ExellFront/index.html.twig');
-        }
     }
 }
