@@ -87,22 +87,49 @@ easy_admin:
             class: ExellBundle\Entity\Images
         Agence:
             class: ExellBundle\Entity\Agence
+            list:
+                fields:
+                    - {property: 'nomAgence', label: 'Nom de l agence' }
+                    - {property: 'adress', label: 'Adresse de l agence' }
+                    - {property: 'lots', label: 'Programmes de l agence' }
+            form:
+                fields:
+                    - {property: 'nomAgence', label: 'Nom de l agence' }
+                    - {property: 'adress', label: 'Adresse de l agence' }
+                    - {property: 'lots', label: 'Programmes de l agence' }
         TypeInvest:
             class: ExellBundle\Entity\TypeInvest
+            label: 'Type d investissement'
         Departement:
             class: ExellBundle\Entity\Departement
         Categorie:
             class: ExellBundle\Entity\Categorie
         Adresse:
             class: ExellBundle\Entity\Adresse
+            list:
+                fields: [ {property: 'libelleAdress', label: 'Libelle pour Adresse'}, 'numeroVoie', 'typeVoie', 'ville', 'codePostal']
+            form:
+                fields: [ {property: 'libelleAdress', label: 'Libelle pour Adresse'}, 'numeroVoie', 'typeVoie', 'ville', 'codePostal']
         Prix:
             class: ExellBundle\Entity\Prix
+            list:
+                fields: ['libellePrix', {property: 'price',label: 'Prix moyen'},{property: 'priceMin',label: 'Prix minimum'},{property: 'priceMax',label: 'Prix maximal'}]
+            form:
+                fields: ['libellePrix', {property: 'price',label: 'Prix moyen'},{property: 'priceMin',label: 'Prix minimum'},{property: 'priceMax',label: 'Prix maximal'}]
         Presentation:
             class: ExellBundle\Entity\Presentation
+            list:
+                fields: [ 'nomPresentation', 'dispositifFiscal', 'normes', { property: 'nbrLots',label: 'nombre de Lots disponible' }, 'dateLivraison' ]
+            form:
+                fields: [ 'nomPresentation', 'dispositifFiscal', 'normes', { property: 'nbrLots',label: 'nombre de Lots disponible' }, 'dateLivraison' ]
         Offres:
             class: ExellBundle\Entity\Offres
         Bien:
             class: ExellBundle\Entity\Bien
+            list:
+                fields: [ {property: 'nomBien',label: 'Nom du Programme'}, {property: 'typeinvest',label: 'Type d investissement' },'images',{property: 'adress',label: 'Adresse'},'prix','agence','offres' ]
+            form:
+                fields: [ {property: 'nomBien',label: 'Nom du Programme'}, {property: 'typeinvest',label: 'Type d investissement' },'images',{property: 'adress',label: 'Adresse'},'prix','agence','offres' ]
         Utilisateur:
             class: ExellBundle\Entity\Utilisateur
             list:
